@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    consul:
+      enabled: true
+      port: 8500
+      host: 127.0.0.1
+      ribbon:
+        enable: true
+      discovery:
+        enabled: false
+        register: true
+        service-name: mst-bff-service
+        instance-id: ${spring.application.name}:${server.port}
+        prefer-ip-address: true
+  application:
+    name: mst-bff-service
