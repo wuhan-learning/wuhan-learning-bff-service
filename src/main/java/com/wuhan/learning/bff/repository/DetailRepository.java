@@ -52,7 +52,7 @@ public class DetailRepository {
     try {
       orderDTOList = orderClient.getOrderByUserId(userId);
     } catch (Exception e) {
-      log.info("getAllGoods:" + e.getMessage());
+      log.info("getOrderByUserId:" + e.getMessage());
     }
     return orderDTOList;
   }
@@ -62,7 +62,7 @@ public class DetailRepository {
     try {
       userDTO = userClient.getUserById(userId);
     } catch (Exception e) {
-      log.info("getAllGoods:" + e.getMessage());
+      log.info("getUserById:" + e.getMessage());
     }
     return userDTO;
   }
